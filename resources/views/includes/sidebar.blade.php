@@ -35,13 +35,13 @@
               <li class="nav-item">
                 <a href="{{ route('home') }}" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
+                  <p>Admin Dashboard</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ route('biodata') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
+                  <p>Biodata Pendaftar</p>
                 </a>
               </li>
               <li class="nav-item">
