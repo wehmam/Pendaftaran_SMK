@@ -10,28 +10,27 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    {{-- <h1 class="m-0 text-dark">Hell o Masbro</h1> --}}
+                    <h1 class="m-0 text-blue font-weight-bold">Jurusan</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                         <li class="breadcrumb-item active">Dashboard v1</li>
                     </ol>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 text-center">
-                <h2 class="mt-5 font-weight-bold text-blue">Jurusan SMK Angkasa</h2>
+                </div>
             </div>
         </div>
-
-        <div class="row mt-5 text-center">
-            <div class="col-md-12">
-                <table class="table table-hover">
-                    <caption> <h5 class="mt-2 text-blud font-weight-bold">Total Pendaftar : {{ count($daftar) }}</h5></caption>
+    </div>
+    <div class="container-fluid">
+        <div class="row mt-5 mx-5">
+            <div class="col-md-8">
+                <h5 class="font-weight-bold">Teknik Penerbang</h5>
+            </div>
+        </div>
+        <div class="row mt-3 mx-5 text-center">
+            <div class="col-md-8">
+                <table class="table table-hover table-bordered">
+                    <caption> <h5 class="mt-2 text-blud font-weight-bold">Total Teknik Penerbang : {{ count($teknikPenerbang) }}</h5></caption>
                     <thead>
                       <tr>
                         <th scope="col">No Daftar</th>
@@ -41,7 +40,73 @@
                       </tr>
                     </thead>
                     <tbody class="">
-                        @foreach ($daftar as $item)
+                        @foreach ($teknikPenerbang as $item)
+                            <tr>
+                                @for($i=0;$i < count($item);$i++)
+                                <td>{{ $item[$i] }}</td>
+                                @endfor
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>                    
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="row mt-5 mx-5">
+            <div class="col-md-8">
+                <h5 class="font-weight-bold">Teknik mesin</h5>
+            </div>
+        </div>
+        <div class="row mt-3 mx-5 text-center">
+            <div class="col-md-8">
+                <table class="table table-hover table-bordered">
+                    <caption> <h5 class="mt-2 text-blud font-weight-bold">Total Teknik Mesin : {{ count($teknikMesin) }}</h5></caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">No Daftar</th>
+                        <th scope="col">Nama Lengkap </th>
+                        <th scope="col">Jurusan</th>
+                        <th scope="col">Tahun Lulus</th>
+                      </tr>
+                    </thead>
+                    <tbody class="">
+                        @foreach ($teknikMesin as $item)
+                            <tr>
+                                @for($i=0;$i < count($item);$i++)
+                                <td>{{ $item[$i] }}</td>
+                                @endfor
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>                    
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="row mt-5 mx-5">
+            <div class="col-md-8">
+                <h5 class="font-weight-bold">Teknik Pilot</h5>
+            </div>
+        </div>
+        <div class="row mt-3 mx-5 text-center">
+            <div class="col-md-8">
+                <table class="table table-hover table-bordered">
+                    <caption> <h5 class="mt-2 text-blud font-weight-bold">Total Jurusan Pilot : {{ count($pilot) }}</h5></caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">No Daftar</th>
+                        <th scope="col">Nama Lengkap </th>
+                        <th scope="col">Jurusan</th>
+                        <th scope="col">Tahun Lulus</th>
+                      </tr>
+                    </thead>
+                    <tbody class="">
+                        @foreach ($pilot as $item)
                             <tr>
                                 @for($i=0;$i < count($item);$i++)
                                 <td>{{ $item[$i] }}</td>
