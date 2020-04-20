@@ -21,21 +21,61 @@ Route::prefix('admin')->group(function(){
     })->name('home');
     Route::get('/biodata', function () {
 
-        $pendaftar = [
+        $teknikPenerbang = [
             'pendaftar1' => [101,"Imam Maulana Ashari","Teknik Penerbang",2019],
-            'pendaftar2' => [102,"Ashari","Pilot",2016],
-            'pendaftar3' => [103,"Riyo","Teknik Penerbang",2019],
-            'pendaftar4' => [104,"Jiyara","Teknik Mesin Pesawat",2017],
-            'pendaftar5' => [105,"Maul","Pilot",2016],
-            'pendaftar6' => [106,"Imam Maulana Ashari","Teknik Penerbang",2019],
-            'pendaftar7' => [107,"Rio Febrian","Teknik Penerbang",2019],
-            'pendaftar8' => [108,"Syaifudin","Doro",2019],
-            'pendaftar9' => [109,"Imam Maulana Ashari","Teknik Penerbang",2019],
-            'pendaftar10' => [110,"Imam Maulana Ashari","Teknik Penerbang",2019],
+            'pendaftar2' => [103,"Riyo","Teknik Penerbang",2019],
+            'pendaftar3' => [106,"Imam Maulana Ashari","Teknik Penerbang",2019],
+            'pendaftar4' => [107,"Rio Febrian","Teknik Penerbang",2019],
+            'pendaftar5' => [109,"Andy","Teknik Penerbang",2019],
+            'pendaftar6' => [110,"hardiyanto","Teknik Penerbang",2019],
         ];
-        dd($pendaftar);
-        return view('pages.backend.biodata');
+        $pilot = [
+            'pendaftar7' => [301,"Ashari","Pilot",2016],
+            'pendaftar8' => [302,"Jiyara","Pilot",2017],
+            'pendaftar9' => [303,"Maul","Pilot",2016],
+            'pendaftar10' => [304,"Syaifudin","Pilot",2019],
+        ];
+        $teknikMesin = [
+        
+            'pendaftar11' => [212,"Anjar","Teknik Mesin",2016],
+            'pendaftar12' => [214,"Anjay","Teknik Mesin",2017],
+            'pendaftar13' => [215,"Aidar","Teknik Mesin",2016],
+            'pendaftar14' => [216,"Aigokil","Teknik Mesin",2019],
+            
+        ];
+        $pendaftar = $teknikPenerbang + $pilot + $teknikMesin;
+        // dd($pendaftar);
+        return view('pages.backend.biodata')->with('daftar',$pendaftar);
     })->name('biodata');
+
+    Route::get('/jurusan', function () {
+
+        $teknikPenerbang = [
+            'pendaftar1' => [101,"Imam Maulana Ashari","Teknik Penerbang",2019],
+            'pendaftar2' => [103,"Riyo","Teknik Penerbang",2019],
+            'pendaftar3' => [106,"Imam Maulana Ashari","Teknik Penerbang",2019],
+            'pendaftar4' => [107,"Rio Febrian","Teknik Penerbang",2019],
+            'pendaftar5' => [109,"Andy","Teknik Penerbang",2019],
+            'pendaftar6' => [110,"hardiyanto","Teknik Penerbang",2019],
+        ];
+        $pilot = [
+            'pendaftar7' => [301,"Ashari","Pilot",2016],
+            'pendaftar8' => [302,"Jiyara","Pilot",2017],
+            'pendaftar9' => [303,"Maul","Pilot",2016],
+            'pendaftar10' => [304,"Syaifudin","Pilot",2019],
+        ];
+        $teknikMesin = [
+        
+            'pendaftar11' => [212,"Anjar","Teknik Mesin",2016],
+            'pendaftar12' => [214,"Anjay","Teknik Mesin",2017],
+            'pendaftar13' => [215,"Aidar","Teknik Mesin",2016],
+            'pendaftar14' => [216,"Aigokil","Teknik Mesin",2019],
+            
+        ];
+        $jurusan = $teknikPenerbang + $pilot + $teknikMesin;
+        // dd($jurusan);
+        return view('pages.backend.jurusan')->with('daftar',$jurusan);
+    })->name('jurusan');
     
 });
 

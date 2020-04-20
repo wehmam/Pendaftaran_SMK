@@ -1,8 +1,8 @@
 @extends('layout.master')
 
-@section('title','Biodata')
+@section('title','Jurusan')
 @include('includes.header')
-@section('biodata','active')
+@section('jurusan','active')
 @include('includes.sidebar')
 @section('konten')
 <div class="content-wrapper">
@@ -23,8 +23,8 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center">
-                <h2 class="mt-5 font-weight-bold text-blue">Biodata Pendaftar Siswa SMK Angkasa</h2>
+            <div class="col-md-6 text-center">
+                <h2 class="mt-5 font-weight-bold text-blue">Jurusan SMK Angkasa</h2>
             </div>
         </div>
 
@@ -54,5 +54,6 @@
         </div>
 
     </div>
+
 </div>
 @endsection

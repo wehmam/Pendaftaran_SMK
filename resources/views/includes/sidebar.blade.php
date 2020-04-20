@@ -24,7 +24,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -33,21 +33,21 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ route('home') }}" class="nav-link active">
+                <a href="{{ route('home') }}" class="nav-link @yield('dashboard')">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Admin Dashboard</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('biodata') }}" class="nav-link">
+                <a href="{{ route('biodata') }}" class="nav-link @yield('biodata')">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Biodata Pendaftar</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="{{ route('jurusan') }}" class="nav-link @yield('jurusan')">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
+                  <p>Jurusan</p>
                 </a>
               </li>
             </ul>
